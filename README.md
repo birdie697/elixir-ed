@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How to set up this app
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1.  $ gem install rails
+2.  $ rails new elixir-ed --database=postgresql --skip-turbolinks --skip-test-unit
+3.  $ cd elixir-ed
+4.  $ bundle exec rake db:create
+5.  $ bundle exec rails server --binding=0.0.0.0
