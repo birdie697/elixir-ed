@@ -13,3 +13,80 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+   background: url('/alcohol-barrel-basement.jpg') no-repeat center center fixed;
+   background-position: center;
+   background-size: cover;
+   background-blend-mode: lighten;
+ }
+
+ .header_footer {
+   background: url('/black_rack.jpeg');
+   text-align: center;
+   width: 100%;
+   font-size: 1.125em;
+   position: fixed;
+   left: 0;
+   margin-left: 0rem;
+ }
+
+ .header {
+   margin-bottom: 10rem;
+   margin-top: 0rem;
+   margin-left: 0rem;
+   top: 0;
+ }
+
+ .footer {
+   margin-top: 10rem;
+   margin-bottom: 0rem;
+   bottom: 0;
+ }
+
+ .link a {
+   padding: 0% 10%;
+   color:  #FFFFFF;
+   text-decoration: none;
+ }
+
+ .pages {
+   color:  #7A7264;
+   background-color: #B8B2A2;
+   padding: 2%;
+   margin: 5% 20%;
+   border-radius: 40px;
+   border: solid 4px #47321F;
+ }
+
+ .pages h1 {
+   text-align: center;
+ }
+
+ .formula {
+   margin-left: 2%;
+ }
+
+ .fit-picture {
+   width: 50%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .home:hover a {
+  color:  #CEAF80;
+}
+
+.elixir:hover a {
+ color:  #CEAF80;
+}
+
+.calculation:hover a {
+ color:  #CEAF80;
+}
+
+.credit:hover a {
+ color:  #CEAF80;
+}
