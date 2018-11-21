@@ -90,3 +90,31 @@ body {
 .credit:hover a {
  color:  #CEAF80;
 }
+
+.input-field {
+  padding: 2%;
+}
+
+.input-volume {
+  display: inline-block;
+  padding-right: 2%;
+}
+
+.button {
+  background: url('/black_rack.jpeg');
+  text-align: center;
+  color:  #FFFFFF;
+  text-decoration: none;
+  padding: 2% 2%;
+  margin: 2% 40%;
+  width: 20%;
+  border-radius: 10px;
+  border: solid 2px #FFFFFF;
+}
+
+.button a {
+  text-align: center;
+  color:  #FFFFFF;
+  font-size: 1.125em;
+  text-decoration: none;
+}

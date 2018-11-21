@@ -1,15 +1,17 @@
 <div class="pages">
   <h1>Results</h1>
-  <h3>ABV: <%=@abv%></h3>
-  <h3>Volume: <%=@volume%></h3>
-  <h3>Unit: <%=@unit%></h3>
-  <h3>Cost: $<%=@cost%></h3>
+  <h3>ABV: <%=('%.1f' % @abv)%>%</h3>
+  <h3>Volume: <%=('%.0f' % @volume)%> <%=@unit%></h3>
   <h3>Number of Servings: <%=@number_of_servings%></h3>
-  <h3>Cost per Serving: $<%=@cost_per_serving%></h3>
-  <h3>Cost as a standard 750ml bottle of wine: $ <%=@wine_cost%></h3>
-  <h3>Cost as a standard 750ml bottle of spirts: $ <%=@spirits_cost%></h3>
-  <h3>Cost as a 6pk of 12 fluid ounce bottles of beer: $ <%=@beer_6pk_cost%></h3>
-  <h3>Cost as a 4pk of 16 fluid ounce cans of beer: $<%=@beer_4pk_cost%></h3>
 
-  <p class="link"><%= link_to 'Bartender!  Another!', new_home_path %></p>
+  <% if @cost != 0 %>
+    <h3>Cost: $<%=('%.2f' % @cost)%></h3>
+    <h3>Cost per Serving: $<%=('%.2f' % @cost_per_serving)%></h3>
+    <h3>Cost as a standard 750ml bottle of wine (12%ABV): $ <%=('%.2f' % @wine_cost)%></h3>
+    <h3>Cost as a standard 750ml bottle of spirts (80 Proof): $ <%=('%.2f' % @spirits_cost)%></h3>
+    <h3>Cost as a 6pk of 12 fluid ounce bottles of beer (5%ABV): $ <%=('%.2f' % @beer_6pk_cost)%></h3>
+    <h3>Cost as a 4pk of 16 fluid ounce cans of beer (5%ABV): $<%=('%.2f' % @beer_4pk_cost)%></h3>
+  <% end %>
+
+  <button class="button" type="submit"><%= link_to 'Bartender!  Another!', new_home_path %></button>
 </div>

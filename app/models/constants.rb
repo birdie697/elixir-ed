@@ -1,16 +1,16 @@
 module Constants
   SERVINGS_CONVERSION = 60
-  ML_TO_OZ_CONVERSATION = 0.033814
+  ML_TO_OZ_CONVERSION = 0.033814
 
-  SERVINGS_PER_BOTTLE_OF_WINE = 5
-  SERVINGS_PER_BOTTLE_OF_SPIRITS = 16.9
+  SERVINGS_PER_BOTTLE_OF_WINE = 5.0721
+  SERVINGS_PER_BOTTLE_OF_SPIRITS = 16.907
   SERVINGS_PER_6PK_OF_BEER = 6           #6pk of 12oz bottles
   SERVINGS_PER_4PK_OF_BEER = 5.333       #4pk of 16oz cans
 
   def calculate_servings(in_abv, in_volume, in_unit)
 
-    if in_unit == "ML"
-      volume = in_volume*ML_TO_OZ_CONVERSATION
+    if in_unit == "ml"
+      volume = in_volume*ML_TO_OZ_CONVERSION
     else
       volume = in_volume
     end
