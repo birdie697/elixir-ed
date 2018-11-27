@@ -4,11 +4,19 @@
 
   <form action="/homes">
 
+
+    <h3>Start with selecting your packaging...</h3>
     <div class="input-field">
-      <label for="abv">ABV</label>
-      <input type="text" id="abv" name="abv" placeholder="5.1">
+      <label for="packaging">Packaging</label>
+        <select name="packaging" type="text">
+          <option value=""></option>
+          <option value="750ml">750ml bottle</option>
+          <option value="4-16">4pk of 16 fluid ounnce cans</option>
+          <option value="6-12">6pk of 12 fluid ounnce bottles</option>
+        </select>
     </div>
 
+    <h3>...or a custom volume</h3>
     <div class="input-field">
       <div class="input-volume">
         <label for="volume">Volume</label>
@@ -18,12 +26,20 @@
       <div class="input-volume">
         <label for="unit">Unit</label>
           <select name="unit" type="text">
+            <option value=""></option>
             <option value="fluid ounces">fluid ounces</option>
             <option value="ml">ml</option>
           </select>
       </div>
     </div>
 
+    <h3>Input your ABV</h3>
+    <div class="input-field">
+      <label for="abv">ABV</label>
+      <input type="text" id="abv" name="abv" placeholder="5.1">
+    </div>
+
+    <h3>Optionally, input your cost</h3>
     <div class="input-field">
       <label for="cost">Cost</label>
       <input type="text" id="cost" name="cost" placeholder="10.99">
