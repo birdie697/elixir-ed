@@ -7,7 +7,8 @@ class HomesController < ApplicationController
     @cost=params[:cost].to_f
     @packaging=params[:packaging]
 
-    @number_of_servings = Constants.calculate_servings(@abv, @volume, @unit)
+    @calculated_volume = Constants.calculate_volume(@packaging, @volume, @unit)
+    @number_of_servings = Constants.calculate_servings(@abv, @calculated_volume)
     @cost_per_serving = Constants.calculate_cost_per_serving(@cost, @number_of_servings)
 
     @wine_cost = Constants.calculate_wine_cost(@cost_per_serving)
