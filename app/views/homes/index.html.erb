@@ -1,7 +1,13 @@
 <div class="pages">
   <h1>Results</h1>
+
+  <% if @packaging == nil %>
+    <h3>Volume: <%=('%.0f' % @calculated_volume)%> <%=@unit%></h3>
+  <% else %>
+    <h3>Packaging: <%=Constants::DISPLAY_PACKAGING[@packaging]%></h3>
+  <% end %>
+
   <h3>ABV: <%=('%.1f' % @abv)%>%</h3>
-  <h3>Volume: <%=('%.0f' % @volume)%> <%=@unit%></h3>
   <h3>Number of Servings: <%=@number_of_servings%></h3>
 
   <% if @cost != 0 %>
