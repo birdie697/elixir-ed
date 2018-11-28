@@ -3,10 +3,16 @@ class HomesController < ApplicationController
   def index
     @abv=params[:abv].to_f
     @volume=params[:volume].to_f
-    @unit=params[:unit]
+    @unit_input=params[:unit]
     @cost=params[:cost].to_f
     @packaging=params[:packaging]
 
+    if @unit_input == nil || @unit_input == ""
+      @unit = "fluid ounces"
+    else
+      @unit = @unit_input
+    end
+      
     @calculated_volume = Constants.calculate_volume(@packaging, @volume, @unit)
     @number_of_servings = Constants.calculate_servings(@abv, @calculated_volume)
     @cost_per_serving = Constants.calculate_cost_per_serving(@cost, @number_of_servings)

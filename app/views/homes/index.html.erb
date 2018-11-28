@@ -1,7 +1,7 @@
 <div class="pages">
   <h1>Results</h1>
 
-  <% if @packaging == nil %>
+  <% if @packaging == nil || @packaging == "" %>
     <h3>Volume: <%=('%.0f' % @calculated_volume)%> <%=@unit%></h3>
   <% else %>
     <h3>Packaging: <%=Constants::DISPLAY_PACKAGING[@packaging]%></h3>

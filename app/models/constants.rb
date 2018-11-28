@@ -1,11 +1,18 @@
 module Constants
 
   BOTTLE_750ML = 750
+  BOTTLE_500ML = 500
+  BOTTLE_375ML = 375
+
+  BOTTLE_22OZ = 22
   BOTTLE_12OZ = 12
   CAN_16OZ = 16
 
+  BOX_3L = 3000
+
   UNITS_IN_6PK = 6
   UNITS_IN_4PK = 4
+  UNITS_IN_12PK = 12
 
   WINE_SERVING_OZ = 5
   SPIRITS_SERVING_OZ = 1.5
@@ -21,8 +28,15 @@ module Constants
 
   DISPLAY_PACKAGING = {
     "750ml" => "750ml bottle",
-    "4pk-16oz" => "4-pk of 16oz cans",
-    "6pk-12oz" => "6-pk of 12oz bottles"
+    "4pk-16oz" => "4pk-16oz bottle/can",
+    "6pk-12oz" => "6pk-12oz bottle/can",
+    "16oz" => "16oz can",
+    "22oz" => "22oz bottle",
+    "500ml" => "500ml bottle",
+    "375ml" => "375ml bottle",
+    "12pk-12oz" => "12pk-12oz bottle/can",
+    "6pk-16oz" => "6pk-16oz bottle/can",
+    "3L" => "3 liter box"
   }
 
   def calculate_volume(in_packaging, in_volume, in_unit)
@@ -34,6 +48,20 @@ module Constants
       volume = UNITS_IN_4PK*CAN_16OZ
     when "6pk-12oz"
       volume = UNITS_IN_6PK*BOTTLE_12OZ
+    when "16oz"
+      volume = CAN_16OZ
+    when "22oz"
+      volume = BOTTLE_22OZ
+    when "500ml"
+      volume = BOTTLE_500ML*ML_TO_OZ_CONVERSION
+    when "375ml"
+      volume = BOTTLE_375ML*ML_TO_OZ_CONVERSION
+    when "12pk-12oz"
+      volume = UNITS_IN_12PK*BOTTLE_12OZ
+    when "6pk-16oz"
+      volume = UNITS_IN_6PK*CAN_16OZ
+    when "3L"
+      volume = BOX_3L*ML_TO_OZ_CONVERSION
     else
       if in_unit == "ml"
         volume = in_volume*ML_TO_OZ_CONVERSION
