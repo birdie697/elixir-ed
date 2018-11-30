@@ -19,5 +19,6 @@
     <h3>Cost as a 4pk-16oz bottles/cans of beer (5%ABV): $<%=('%.2f' % @beer_4pk_cost)%></h3>
   <% end %>
 
-  <button class="button" type="submit"><%= link_to 'Bartender!  Another!', new_home_path %></button>
+  <%= link_to '<button class="button" type="submit">Bartender!  Another!</button>'.html_safe, new_home_path %>
+
 </div>

@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :educations, only: [:index]
   resources :calculations, only: [:index]
   resources :credits, only: [:index]
+  resources :helps, only: [:index]
 
 end
